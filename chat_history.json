@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "hello"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm your demo chatbot. Ask me about the project, how to run it, or demo features."
+  },
+  {
+    "role": "user",
+    "content": "how to run"
+  },
+  {
+    "role": "assistant",
+    "content": "Follow the steps in README: create venv, install, run flask. Open the UI at http://127.0.0.1:5000/"
+  },
+  {
+    "role": "user",
+    "content": "features"
+  },
+  {
+    "role": "assistant",
+    "content": "Features include session memory, a prompt framework for model mode, and a simple local fallback."
+  }
+]
