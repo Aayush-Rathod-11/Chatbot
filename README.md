@@ -22,7 +22,7 @@ Open http://127.0.0.1:5000
 
 1. git init
 2. git add .
-3. git commit -m "Initial commit"
+3. git commit -m "Add Initial Files"
 4. On GitHub: create repo e.g. `yourname/chatbot-demo`
 5. git remote add origin https://github.com/<your-username>/<your-repo>.git
 6. git branch -M main
