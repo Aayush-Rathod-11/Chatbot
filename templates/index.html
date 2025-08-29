@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Conversational AI Chatbot — Demo</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Conversational AI Chatbot</h1>
+        <p class="subtitle">
+          Local fallback + optional OpenAI model — try both.
+        </p>
+      </header>
+
+      <main>
+        <section class="chat-area">
+          <div id="chatLog" class="chat-log"></div>
+          <form id="messageForm" class="message-form">
+            <input
+              id="messageInput"
+              placeholder="Type your message..."
+              autocomplete="off"
+            />
+            <button type="submit">Send</button>
+          </form>
+        </section>
+
+        <aside class="panel">
+          <h3>Settings</h3>
+          <div class="field">
+            <label>Mode</label>
+            <select id="modeSelect">
+              <option value="local">Local (offline)</option>
+              <option value="openai">OpenAI (requires API key)</option>
+            </select>
+          </div>
+
+          <div class="field" id="apiKeyField" style="display: none">
+            <label>OpenAI API Key</label>
+            <input id="apiKeyInput" type="password" placeholder="sk-..." />
+            <small>Keep key private. For demo only.</small>
+          </div>
+
+          <div class="field">
+            <label>System prompt</label>
+            <textarea id="systemPrompt" rows="3">
+You are a helpful, concise assistant that helps the user with the project.</textarea
+            >
+          </div>
+
+          <div class="field">
+            <label>Temperature: <span id="tempLabel">0.7</span></label>
+            <input
+              id="temperature"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value="0.7"
+            />
+          </div>
+
+          <div class="buttons">
+            <button id="clearBtn" class="btn">Clear Conversation</button>
+            <a class="btn link" href="#" id="downloadBtn"
+              >Download Chat (JSON)</a
+            >
+          </div>
+
+          <hr />
+          <h4>Quick prompts</h4>
+          <button class="quick" data-msg="hello">Say Hello</button>
+          <button class="quick" data-msg="how to run">How to run</button>
+          <button class="quick" data-msg="features">Show features</button>
+        </aside>
+      </main>
+
+      <footer>
+        <small
+          >Demo project — extend with vector DB / embeddings for
+          retrieval.</small
+        >
+      </footer>
+    </div>
+
+    <script src="/static/chat.js"></script>
+  </body>
+</html>

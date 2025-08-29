@@ -1,0 +1,7 @@
+{
+  "project": "This is a simple Conversational AI Chatbot demo project. It supports local and OpenAI modes.",
+  "hello": "Hello! I'm your demo chatbot. Ask me about the project, how to run it, or demo features.",
+  "how to run": "Follow the steps in README: create venv, install, run flask. Open the UI at http://127.0.0.1:5000/",
+  "features": "Features include session memory, a prompt framework for model mode, and a simple local fallback.",
+  "who made you": "You can say you set me up as part of an internship demo — great work!"
+}
